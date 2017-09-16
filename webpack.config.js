@@ -15,5 +15,5 @@ module.exports = {
 			{ test: /\.js$/, use: 'babel-loader', exclude: /(node_modules|bower_components)/ }
 		]
 	},
-	plugins: [new HtmlWebpackPlugin()]
+	plugins: [new HtmlWebpackPlugin({template: 'app/index.html'})]
 }
