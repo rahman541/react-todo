@@ -16,9 +16,12 @@ module.exports = {
 				test: /\.js$/,
 				loader: 'babel-loader',
 				exclude: /(node_modules|bower_components)/,
-				query: {
-					presets: ['es2015', 'react']}
-				}
+				query: {presets: ['es2015', 'react']}
+			},
+			{
+				test: /\.(woff|woff2|eot|ttf|otf)$/,
+				loader: "file-loader"
+			}
 		]
 	},
 	plugins: [new HtmlWebpackPlugin({template: 'app/index.html'})]
