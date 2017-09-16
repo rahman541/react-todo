@@ -12,7 +12,13 @@ module.exports = {
 	module: {
 		rules: [
 			{ test: /\.css$/, use: [ 'style-loader', 'css-loader' ] },
-			{ test: /\.js$/, use: 'babel-loader', exclude: /(node_modules|bower_components)/ }
+			{
+				test: /\.js$/,
+				loader: 'babel-loader',
+				exclude: /(node_modules|bower_components)/,
+				query: {
+					presets: ['es2015', 'react']}
+				}
 		]
 	},
 	plugins: [new HtmlWebpackPlugin({template: 'app/index.html'})]
